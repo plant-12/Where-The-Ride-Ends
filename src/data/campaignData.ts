@@ -30,11 +30,11 @@ export const SCENARIO_STEPS: ScenarioStep[] = [
     subtitle: "Reaching Tech Green's Perimeter",
     location: "Tech Green West Approach",
     iconName: "Clock",
-    description: "Dismount signs appear as the rider approaches Tech Green. However, the rental app meter continues ticking on a per-minute basis.",
+    description: "Dismount signs appear near Tech Green, but the rental app meter continues ticking on a per-minute basis.",
     consequences: [
       {
         target: "Financial Dilemma",
-        impact: "The rider must either keep paying while walking the scooter, or end the rental immediately.",
+        impact: "Rider pays continuous per-minute fees while walking, or must end the rental immediately.",
         badgeText: "Meter Ticking"
       }
     ]
@@ -45,11 +45,11 @@ export const SCENARIO_STEPS: ScenarioStep[] = [
     subtitle: "Stopping without a Parking Destination",
     location: "Walkway Entrance & Ramps",
     iconName: "AlertTriangle",
-    description: "With no designated corrals or clear parking guidance nearby, the rider ends the trip at the entrance where other devices have already accumulated.",
+    description: "Lacking marked corrals nearby, the rider ends the trip at the entrance where other devices have already accumulated.",
     consequences: [
       {
         target: "Infrastructure Failure",
-        impact: "Riders respond rationally to a system that tells them where to stop riding, but not where to park.",
+        impact: "Riders respond rationally to a system that marks where to stop riding, but not where to park.",
         badgeText: "Rational Decision under Pressure"
       }
     ]
@@ -64,17 +64,17 @@ export const SCENARIO_STEPS: ScenarioStep[] = [
     consequences: [
       {
         target: "Pedestrians",
-        impact: "A student walking to class must step off the pavement into the grass to bypass clutter.",
+        impact: "Students walking to class must step into grass to bypass clutter.",
         badgeText: "Pedestrian Detour"
       },
       {
         target: "Students with Disabilities",
-        impact: "A wheelchair user encounters a partially obstructed curb cut and access ramp.",
+        impact: "Wheelchair users encounter partially obstructed curb cuts and access ramps.",
         badgeText: "ADA Accessibility Barrier"
       },
       {
         target: "Personal Bike Owners",
-        impact: "A student owning a personal bike finds standard racks occupied by rental devices.",
+        impact: "Standard bike racks are occupied by rental devices.",
         badgeText: "Overcrowded Racks"
       }
     ]
@@ -86,8 +86,8 @@ export const PROBLEM_CARDS: ProblemCard[] = [
     id: "meter-pressure",
     title: "Per-Minute Rental Pricing Pressure",
     icon: "Coins",
-    summary: "Riders face active per-minute charges while searching for nonexistent parking.",
-    detail: "Because rental pricing accrues by the minute, riders are financially incentivized to end their trip as soon as they reach the dismount boundary rather than walking long distances to search for acceptable parking.",
+    summary: "Active per-minute charges press riders to park immediately.",
+    detail: "Per-minute pricing financially incentivizes riders to end trips as soon as they reach the dismount boundary rather than walking long distances to search for acceptable parking.",
     stat: "$/Min",
     statLabel: "Financial Incentive to End Trips Quickly"
   },
@@ -95,8 +95,8 @@ export const PROBLEM_CARDS: ProblemCard[] = [
     id: "missing-corrals",
     title: "Missing End-of-Trip Facilities",
     icon: "MapPinOff",
-    summary: "Campus cycle tracks end abruptly without designated scooter parking corrals.",
-    detail: "Georgia Tech invested in cycle tracks and dismount enforcement zones, but did not construct dedicated parking corrals at major approach points to absorb ending trips.",
+    summary: "Cycle tracks end abruptly without designated scooter corrals.",
+    detail: "Georgia Tech built cycle tracks and dismount zones, but lacks dedicated parking corrals at major approaches to absorb ending rides.",
     stat: "0",
     statLabel: "Designated Corrals at Tech Green West Approaches"
   },
@@ -104,8 +104,8 @@ export const PROBLEM_CARDS: ProblemCard[] = [
     id: "ada-access",
     title: "Accessibility Pathway Bottlenecks",
     icon: "Accessibility",
-    summary: "Accumulated devices encroach on ADA ramps, curb cuts, and walkway widths.",
-    detail: "Devices left near building entrances and handrails frequently narrow path clearances below the required 4-foot ADA standard, creating severe barriers for students with mobility needs.",
+    summary: "Accumulated devices restrict ADA ramps and walkway widths.",
+    detail: "Devices left near building entrances frequently narrow path clearances below the 4-foot ADA standard, creating severe barriers for students with mobility needs.",
     stat: "< 4 ft",
     statLabel: "Pathway Clearance in Problem Areas"
   }
@@ -117,12 +117,12 @@ export const SOLUTION_PILLARS: SolutionPillar[] = [
     number: "01",
     title: "Designated Parking Corrals",
     subtitle: "Two to Three High-Capacity Corrals Near Tech Green Approaches",
-    description: "Positioned where rides naturally end, using low-cost durable pavement striping, wheel stops, and high-visibility signs.",
+    description: "Positioned where rides naturally end, built with low-cost pavement striping, wheel stops, and high-visibility signs.",
     bullets: [
-      "Targeted at the 2–3 busiest dismount approaches",
-      "Primarily designed for shared rental scooters and e-bikes",
-      "Frees up standard bike racks for personal bike and scooter owners",
-      "Keeps ADA ramps and primary footpaths 100% clear"
+      "Targeted at the busiest dismount approaches",
+      "Designed specifically for shared scooters and e-bikes",
+      "Frees up standard racks for personal bikes",
+      "Keeps ADA ramps and footpaths 100% clear"
     ],
     statusBadge: "Pilot Phase 2 Core Feature"
   },
@@ -131,12 +131,12 @@ export const SOLUTION_PILLARS: SolutionPillar[] = [
     number: "02",
     title: "Pre-Boundary Wayfinding & Markings",
     subtitle: "Guiding Riders Before They Reach the Dismount Zone",
-    description: "Signs and pavement decals placed 50 feet prior to the dismount line show riders where to park and highlight perimeter routes around Tech Green.",
+    description: "Signs and ground decals placed 50 feet prior to dismount lines show riders where to park and highlight perimeter routes.",
     bullets: [
-      "Clear distance indicators to nearest corral",
-      "High-visibility pavement decals for down-looking riders",
-      "Perimeter-route guidance around Tech Green walking zones",
-      "Positive framing: Tells riders what TO DO, not just what is forbidden"
+      "Distance indicators to the nearest corral",
+      "High-visibility ground decals for down-looking riders",
+      "Perimeter-route guidance around pedestrian zones",
+      "Positive guidance: Tells riders where to park"
     ],
     statusBadge: "Pilot Phase 2 Core Feature"
   },
@@ -145,10 +145,10 @@ export const SOLUTION_PILLARS: SolutionPillar[] = [
     number: "03",
     title: "Shared-Mobility Operator Coordination",
     subtitle: "In-App Guidance & Future Geofencing",
-    description: "Working with shared-mobility providers (such as Lime) for future in-app parking zone displays, end-of-trip verification photos, and refined geofencing.",
+    description: "Partnering with shared-mobility operators (such as Lime) for in-app parking zone displays, photo verification, and geofencing.",
     bullets: [
-      "Coordinate approved parking corral coordinates with providers",
-      "Explore potential in-app parking incentives or discounts",
+      "Share approved parking corral coordinates",
+      "Explore potential in-app parking incentives",
       "Evaluate geofenced trip completion boundaries"
     ],
     statusBadge: "Proposed Future Phase",

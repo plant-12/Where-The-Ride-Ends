@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PROBLEM_CARDS } from '../data/campaignData';
-import { Coins, MapPinOff, Accessibility, AlertOctagon, HelpCircle, ArrowRight } from 'lucide-react';
+import { Coins, MapPinOff, Accessibility, AlertOctagon, HelpCircle, ArrowRight, Camera, MessageSquareHeart } from 'lucide-react';
 
 export const ProblemSection: React.FC = () => {
   const [selectedCard, setSelectedCard] = useState<string | null>('meter-pressure');
@@ -18,7 +18,7 @@ export const ProblemSection: React.FC = () => {
     <section id="problem" className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
       <div className="container">
         {/* Section Header */}
-        <div style={{ maxWidth: '750px', margin: '0 auto 3.5rem auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '750px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
           <div className="badge badge-navy" style={{ marginBottom: '1rem' }}>
             <AlertOctagon size={14} />
             <span>UNDERSTANDING THE PROBLEM</span>
@@ -28,7 +28,7 @@ export const ProblemSection: React.FC = () => {
             A System That Tells Riders Where to Stop, But Not Where to Park.
           </h2>
 
-          <p style={{ fontSize: '1.15rem', color: '#475569' }}>
+          <p style={{ fontSize: '1.1rem', color: '#475569', lineHeight: 1.6 }}>
             Improper parking is not a failure of student discipline—it is a predictable consequence of conflicting economic incentives and incomplete campus infrastructure.
           </p>
         </div>
@@ -38,7 +38,7 @@ export const ProblemSection: React.FC = () => {
           backgroundColor: '#FFFFFF',
           borderLeft: '6px solid #EAAA00',
           borderRadius: '1rem',
-          padding: '1.75rem 2rem',
+          padding: '1.5rem 2rem',
           boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)',
           marginBottom: '3rem',
           display: 'flex',
@@ -65,22 +65,137 @@ export const ProblemSection: React.FC = () => {
             </div>
             <blockquote style={{
               fontFamily: "'Outfit', sans-serif",
-              fontSize: '1.2rem',
+              fontSize: '1.15rem',
               fontWeight: 600,
               color: '#003057',
               lineHeight: 1.5,
               margin: 0
             }}>
-              "Riders are not necessarily careless. They are responding rationally to infrastructure that tells them where to stop riding, but does not clearly show them where to park while the rental meter keeps ticking."
+              "Riders respond rationally to infrastructure that tells them where to stop riding, but does not clearly show them where to park while the rental meter keeps ticking."
             </blockquote>
+          </div>
+        </div>
+
+        {/* Real GT Campus Photo Showcase Card: Both Real Bad Parking Examples */}
+        <div className="glass-card" style={{
+          marginBottom: '3rem',
+          borderRadius: '1.25rem',
+          overflow: 'hidden',
+          border: '1px solid #CBD5E1',
+          boxShadow: '0 8px 24px rgba(0, 48, 87, 0.08)'
+        }}>
+          <div style={{ padding: '1.5rem 2rem 1rem 2rem', borderBottom: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Camera size={18} style={{ color: '#EAAA00' }} />
+              <h3 style={{ color: '#003057', fontSize: '1.3rem', margin: 0 }}>
+                Real GT Campus Evidence: Current Unguided Parking Issues
+              </h3>
+            </div>
+            <span className="badge badge-red">Two Real GT Campus Photo Examples</span>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+            gap: '1.5rem',
+            padding: '1.5rem'
+          }}>
+            {/* Photo 1 Card */}
+            <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
+              <div style={{ position: 'relative', height: '220px' }}>
+                <img
+                  src="/images/improperly-parked-gt.jpg"
+                  alt="An e-scooter fallen on its side against a stone wall and an e-bike parked across a wide brick walkway at Georgia Tech"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ padding: '1rem' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#E11D48', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
+                  EXAMPLE 1: WALKWAY OBSTRUCTION
+                </div>
+                <figcaption style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.4, margin: 0 }}>
+                  Fallen e-scooter and e-bike cluttering a main GT brick walkway near Skiles, forcing pedestrians into narrow detours.
+                </figcaption>
+              </div>
+            </div>
+
+            {/* Photo 2 Card */}
+            <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
+              <div style={{ position: 'relative', height: '220px' }}>
+                <img
+                  src="/images/scooters-lined-up-gt.jpg"
+                  alt="Four electric rental scooters parked in a row on a narrow concrete sidewalk alongside green landscaping at Georgia Tech"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+              <div style={{ padding: '1rem' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#B45309', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
+                  EXAMPLE 2: UNMARKED SIDEWALK EDGE ACCUMULATION
+                </div>
+                <figcaption style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.4, margin: 0 }}>
+                  Shared scooters accumulating on narrow sidewalk paths without painted corral boundaries or rubber wheel stops.
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Human Voice: Student Reflections Grid */}
+        <div style={{
+          marginBottom: '3rem',
+          backgroundColor: '#FFFFFF',
+          borderRadius: '1.25rem',
+          padding: '1.75rem 2rem',
+          border: '1px solid #E2E8F0',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#B45309', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '1rem' }}>
+            <MessageSquareHeart size={18} />
+            <span>REAL GT STUDENT PERSPECTIVES</span>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '1.5rem'
+          }}>
+            {/* Perspective 1 */}
+            <div style={{
+              backgroundColor: '#F8FAFC',
+              borderRadius: '0.85rem',
+              padding: '1.25rem',
+              borderLeft: '3px solid #003057'
+            }}>
+              <p style={{ fontSize: '0.925rem', color: '#334155', fontStyle: 'italic', margin: '0 0 0.75rem 0', lineHeight: 1.5 }}>
+                "I use Lime scooters every day between classes. I want to park responsibly, but when there's no painted box and the rental meter keeps ticking $0.39/minute, you panic and leave it where others have."
+              </p>
+              <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#003057' }}>
+                — Daily GT Scooter Rider, Junior
+              </div>
+            </div>
+
+            {/* Perspective 2 */}
+            <div style={{
+              backgroundColor: '#F8FAFC',
+              borderRadius: '0.85rem',
+              padding: '1.25rem',
+              borderLeft: '3px solid #E11D48'
+            }}>
+              <p style={{ fontSize: '0.925rem', color: '#334155', fontStyle: 'italic', margin: '0 0 0.75rem 0', lineHeight: 1.5 }}>
+                "Clear ADA ramps aren't a luxury for me—they're how I get to lecture on time. Having a guaranteed 4-foot clear passage makes campus feel welcoming for everyone."
+              </p>
+              <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#E11D48' }}>
+                — GT Wheelchair User & Student Advocate
+              </div>
+            </div>
           </div>
         </div>
 
         {/* 3 Problem Cards Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '1.75rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '1.5rem',
           marginBottom: '2.5rem'
         }}>
           {PROBLEM_CARDS.map((card) => {
@@ -92,7 +207,7 @@ export const ProblemSection: React.FC = () => {
                 onClick={() => setSelectedCard(card.id)}
                 className="glass-card"
                 style={{
-                  padding: '2rem',
+                  padding: '1.75rem',
                   cursor: 'pointer',
                   border: isSelected ? '2px solid #EAAA00' : '1px solid #E2E8F0',
                   boxShadow: isSelected ? '0 10px 25px rgba(234, 170, 0, 0.2)' : '0 4px 6px rgba(0, 0, 0, 0.05)',
@@ -120,9 +235,9 @@ export const ProblemSection: React.FC = () => {
                 )}
 
                 <div style={{
-                  width: '3.5rem',
-                  height: '3.5rem',
-                  borderRadius: '1rem',
+                  width: '3.25rem',
+                  height: '3.25rem',
+                  borderRadius: '0.85rem',
                   backgroundColor: isSelected ? '#003057' : 'rgba(0, 48, 87, 0.06)',
                   color: isSelected ? '#EAAA00' : '#003057',
                   display: 'flex',
@@ -134,11 +249,11 @@ export const ProblemSection: React.FC = () => {
                   {getProblemIcon(card.icon)}
                 </div>
 
-                <h3 style={{ fontSize: '1.3rem', color: '#003057', marginBottom: '0.75rem' }}>
+                <h3 style={{ fontSize: '1.25rem', color: '#003057', marginBottom: '0.5rem' }}>
                   {card.title}
                 </h3>
 
-                <p style={{ color: '#475569', fontSize: '0.975rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+                <p style={{ color: '#475569', fontSize: '0.925rem', lineHeight: 1.55, marginBottom: '1.25rem' }}>
                   {card.summary}
                 </p>
 
@@ -146,7 +261,7 @@ export const ProblemSection: React.FC = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  fontSize: '0.875rem',
+                  fontSize: '0.85rem',
                   fontWeight: 700,
                   color: isSelected ? '#B45309' : '#003057'
                 }}>
@@ -160,19 +275,19 @@ export const ProblemSection: React.FC = () => {
 
         {/* Selected Problem Detail Showcase Container */}
         {selectedCard && (
-          <div className="navy-card animate-fade-in" style={{ padding: '2rem', borderRadius: '1rem' }}>
+          <div className="navy-card animate-fade-in" style={{ padding: '1.75rem 2rem', borderRadius: '1rem' }}>
             {(() => {
               const active = PROBLEM_CARDS.find(c => c.id === selectedCard);
               if (!active) return null;
               return (
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
                     <span className="badge badge-gold">{active.statLabel || 'Root Cause Breakdown'}</span>
                   </div>
-                  <h3 style={{ color: '#FFFFFF', fontSize: '1.5rem', marginBottom: '1rem' }}>
+                  <h3 style={{ color: '#FFFFFF', fontSize: '1.35rem', marginBottom: '0.75rem' }}>
                     {active.title} — Detailed Analysis
                   </h3>
-                  <p style={{ color: '#E2E8F0', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: 0 }}>
+                  <p style={{ color: '#E2E8F0', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: 0 }}>
                     {active.detail}
                   </p>
                 </div>

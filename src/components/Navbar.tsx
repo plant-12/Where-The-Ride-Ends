@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ['hero', 'problem', 'solution', 'pilot', 'impact', 'budget', 'action', 'sources'];
+      const sections = ['hero', 'problem', 'solution', 'pilot', 'action'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -31,12 +31,10 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'The Scenario', href: '#hero', id: 'hero' },
+    { name: 'Home', href: '#hero', id: 'hero' },
     { name: 'The Problem', href: '#problem', id: 'problem' },
-    { name: 'The Solution', href: '#solution', id: 'solution' },
-    { name: 'Pilot Roadmap', href: '#pilot', id: 'pilot' },
-    { name: 'Impact', href: '#impact', id: 'impact' },
-    { name: 'Budget', href: '#budget', id: 'budget' },
+    { name: 'Our Solution', href: '#solution', id: 'solution' },
+    { name: 'Pilot & Budget', href: '#pilot', id: 'pilot' },
     { name: 'Take Action', href: '#action', id: 'action' },
   ];
 
@@ -57,7 +55,7 @@ export const Navbar: React.FC = () => {
         gap: '0.5rem'
       }}>
         <Sparkles size={14} />
-        <span>Georgia Tech Student Proposal & Campaign Pilot • Tech Green Dismount Zone</span>
+        <span>Georgia Tech Student Campaign Proposal • Tech Green Dismount Zone Pilot</span>
       </div>
 
       {/* Main Sticky Header */}

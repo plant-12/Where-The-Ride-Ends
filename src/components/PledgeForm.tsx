@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PledgeFormData } from '../types';
-import { HeartHandshake, CheckCircle2, Share2, Copy, Send, AlertTriangle, Sparkles, MessageSquare } from 'lucide-react';
+import { HeartHandshake, CheckCircle2, Share2, Copy, Send, AlertTriangle, Sparkles, MessageSquareHeart } from 'lucide-react';
 
 export const PledgeForm: React.FC = () => {
   const [pledgeCount, setPledgeCount] = useState(248);
@@ -33,10 +33,10 @@ export const PledgeForm: React.FC = () => {
     <section id="action" className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container">
         {/* Section Header */}
-        <div style={{ maxWidth: '800px', margin: '0 auto 3.5rem auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
           <div className="badge badge-gold" style={{ marginBottom: '1rem' }}>
             <HeartHandshake size={14} />
-            <span>TAKE ACTION TODAY</span>
+            <span>JOIN THE STUDENT MOVEMENT</span>
           </div>
 
           <h2 style={{ color: '#003057', marginBottom: '1rem' }}>
@@ -87,7 +87,7 @@ export const PledgeForm: React.FC = () => {
             }}>
               <AlertTriangle size={18} style={{ color: '#EAAA00', flexShrink: 0, marginTop: '0.1rem' }} />
               <div style={{ fontSize: '0.825rem', color: '#CBD5E1', lineHeight: 1.4 }}>
-                <strong style={{ color: '#EAAA00' }}>Student Assignment Prototype:</strong> This form is part of a Georgia Tech student campaign proposal. Pledges are recorded in prototype state and do not submit directly to GT official administration.
+                <strong style={{ color: '#EAAA00' }}>Student Proposal Prototype:</strong> Submissions record support for our student-led pilot proposal to present to Georgia Tech administration and SGA.
               </div>
             </div>
 
@@ -110,10 +110,10 @@ export const PledgeForm: React.FC = () => {
                   <CheckCircle2 size={36} />
                 </div>
                 <h3 style={{ color: '#FFFFFF', fontSize: '1.6rem', marginBottom: '0.5rem' }}>
-                  Pledge Recorded! Thank You, {formData.name}.
+                  Thank You, {formData.name}!
                 </h3>
                 <p style={{ color: '#CBD5E1', fontSize: '1rem', marginBottom: '1.5rem' }}>
-                  Your support helps demonstrate student demand for clear end-of-trip parking corrals and accessible pathways at Tech Green.
+                  Your support and message mean so much to our student team. Together, we're building a safer, more accessible Georgia Tech.
                 </p>
 
                 <button
@@ -126,9 +126,17 @@ export const PledgeForm: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <h3 style={{ color: '#FFFFFF', fontSize: '1.4rem', marginBottom: '1.25rem' }}>
-                  Add Your Name to the Student Pilot Pledge
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#EAAA00', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                  <MessageSquareHeart size={16} />
+                  <span>Connect With Our Student Team</span>
+                </div>
+                <h3 style={{ color: '#FFFFFF', fontSize: '1.4rem', marginBottom: '1rem' }}>
+                  Add Your Voice to the Student Pilot Pledge
                 </h3>
+
+                <p style={{ color: '#CBD5E1', fontSize: '0.925rem', lineHeight: 1.5, marginBottom: '1.5rem' }}>
+                  "We read every comment submitted here to help strengthen our proposal for SGA and GT Infrastructure. Tell us how scooter parking affects your daily campus routine."
+                </p>
 
                 {/* Name */}
                 <div style={{ marginBottom: '1.25rem' }}>
@@ -236,12 +244,12 @@ export const PledgeForm: React.FC = () => {
                 {/* Optional Comment */}
                 <div style={{ marginBottom: '1.5rem' }}>
                   <label htmlFor="pledge-comments" style={{ display: 'block', color: '#E2E8F0', fontSize: '0.875rem', fontWeight: 600, marginBottom: '0.4rem' }}>
-                    Why do you support this pilot? (Optional)
+                    Share your thoughts or GT campus experience (Optional)
                   </label>
                   <textarea
                     id="pledge-comments"
                     rows={3}
-                    placeholder="e.g. As a wheelchair user, clear ramps are essential for getting to class on time."
+                    placeholder="e.g. As a student walking to Skiles every morning, clear ramps and painted corrals will make a huge difference."
                     value={formData.comments}
                     onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
                     style={{
@@ -259,7 +267,7 @@ export const PledgeForm: React.FC = () => {
 
                 <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.9rem' }}>
                   <Send size={18} />
-                  <span>Submit Support Pledge</span>
+                  <span>Send Your Support & Note</span>
                 </button>
               </form>
             )}
@@ -293,12 +301,12 @@ export const PledgeForm: React.FC = () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                 <Share2 size={22} style={{ color: '#B45309' }} />
                 <h3 style={{ fontSize: '1.3rem', color: '#003057', margin: 0 }}>
-                  Share the Campaign
+                  Spread the Word
                 </h3>
               </div>
 
               <p style={{ fontSize: '0.95rem', color: '#475569', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                Help build momentum across Georgia Tech campus organizations, SGA committees, and student group chats.
+                Help build momentum across Georgia Tech student orgs, SGA committees, and group chats.
               </p>
 
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>

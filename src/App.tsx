@@ -3,9 +3,7 @@ import { Navbar } from './components/Navbar';
 import { HeroScenario } from './components/HeroScenario';
 import { ProblemSection } from './components/ProblemSection';
 import { SolutionSection } from './components/SolutionSection';
-import { PilotTimeline } from './components/PilotTimeline';
-import { ImpactCards } from './components/ImpactCards';
-import { BudgetViewer } from './components/BudgetViewer';
+import { PilotPlanSection } from './components/PilotPlanSection';
 import { PledgeForm } from './components/PledgeForm';
 import { SourcesFooter } from './components/SourcesFooter';
 
@@ -17,9 +15,7 @@ export const App: React.FC = () => {
         <HeroScenario />
         <ProblemSection />
         <SolutionSection />
-        <PilotTimeline />
-        <ImpactCards />
-        <BudgetViewer />
+        <PilotPlanSection />
         <PledgeForm />
       </main>
       <SourcesFooter />

@@ -24,7 +24,7 @@ export const HeroScenario: React.FC = () => {
         position: 'relative',
         width: '100%',
         height: 'clamp(320px, 42vw, 500px)',
-        backgroundImage: 'linear-gradient(180deg, rgba(0, 30, 56, 0.55) 0%, rgba(0, 48, 87, 0.85) 100%), url("/images/gt-campus-banner.jpg")',
+        backgroundImage: 'linear-gradient(180deg, rgba(0, 30, 56, 0.55) 0%, rgba(0, 48, 87, 0.85) 100%), url("images/gt-campus-banner.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center 35%',
         display: 'flex',

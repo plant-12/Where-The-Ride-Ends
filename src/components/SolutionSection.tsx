@@ -81,7 +81,7 @@ export const SolutionSection: React.FC = () => {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', backgroundColor: '#CBD5E1', height: '220px' }}>
                 <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
                   <img
-                    src="/images/improperly-parked-gt.jpg"
+                    src="images/improperly-parked-gt.jpg"
                     alt="Fallen e-scooter and bike blocking a main GT pedestrian walkway"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -92,7 +92,7 @@ export const SolutionSection: React.FC = () => {
 
                 <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
                   <img
-                    src="/images/scooters-lined-up-gt.jpg"
+                    src="images/scooters-lined-up-gt.jpg"
                     alt="Shared e-scooters accumulating on sidewalk edges without painted corral lines"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

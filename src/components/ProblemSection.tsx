@@ -104,7 +104,7 @@ export const ProblemSection: React.FC = () => {
             <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
               <div style={{ position: 'relative', height: '220px' }}>
                 <img
-                  src="/images/improperly-parked-gt.jpg"
+                  src="images/improperly-parked-gt.jpg"
                   alt="An e-scooter fallen on its side against a stone wall and an e-bike parked across a wide brick walkway at Georgia Tech"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
@@ -123,7 +123,7 @@ export const ProblemSection: React.FC = () => {
             <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
               <div style={{ position: 'relative', height: '220px' }}>
                 <img
-                  src="/images/scooters-lined-up-gt.jpg"
+                  src="images/scooters-lined-up-gt.jpg"
                   alt="Four electric rental scooters parked in a row on a narrow concrete sidewalk alongside green landscaping at Georgia Tech"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

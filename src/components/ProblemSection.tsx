@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { PROBLEM_CARDS } from '../data/campaignData';
 import { Coins, MapPinOff, Accessibility, AlertOctagon, HelpCircle, ArrowRight, Camera, MessageSquareHeart } from 'lucide-react';
+import improperlyParkedImg from '../assets/improperly-parked-gt.jpg';
+import scootersLinedUpImg from '../assets/scooters-lined-up-gt.jpg';
 
 export const ProblemSection: React.FC = () => {
   const [selectedCard, setSelectedCard] = useState<string | null>('meter-pressure');
@@ -104,7 +106,7 @@ export const ProblemSection: React.FC = () => {
             <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
               <div style={{ position: 'relative', height: '220px' }}>
                 <img
-                  src="images/improperly-parked-gt.jpg"
+                  src={improperlyParkedImg}
                   alt="An e-scooter fallen on its side against a stone wall and an e-bike parked across a wide brick walkway at Georgia Tech"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
@@ -123,7 +125,7 @@ export const ProblemSection: React.FC = () => {
             <div style={{ border: '1px solid #E2E8F0', borderRadius: '0.85rem', overflow: 'hidden', backgroundColor: '#FFFFFF' }}>
               <div style={{ position: 'relative', height: '220px' }}>
                 <img
-                  src="images/scooters-lined-up-gt.jpg"
+                  src={scootersLinedUpImg}
                   alt="Four electric rental scooters parked in a row on a narrow concrete sidewalk alongside green landscaping at Georgia Tech"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

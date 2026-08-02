@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { SOLUTION_PILLARS } from '../data/campaignData';
 import { CheckCircle, Navigation, ShieldCheck, MapPin, Layers, Compass, ArrowUpRight, Camera, XCircle, AlertTriangle } from 'lucide-react';
+import improperlyParkedImg from '../assets/improperly-parked-gt.jpg';
+import scootersLinedUpImg from '../assets/scooters-lined-up-gt.jpg';
 
 export const SolutionSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('corrals');
@@ -81,7 +83,7 @@ export const SolutionSection: React.FC = () => {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', backgroundColor: '#CBD5E1', height: '220px' }}>
                 <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
                   <img
-                    src="images/improperly-parked-gt.jpg"
+                    src={improperlyParkedImg}
                     alt="Fallen e-scooter and bike blocking a main GT pedestrian walkway"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
@@ -92,7 +94,7 @@ export const SolutionSection: React.FC = () => {
 
                 <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
                   <img
-                    src="images/scooters-lined-up-gt.jpg"
+                    src={scootersLinedUpImg}
                     alt="Shared e-scooters accumulating on sidewalk edges without painted corral lines"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

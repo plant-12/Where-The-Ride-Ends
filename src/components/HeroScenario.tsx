@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SCENARIO_STEPS } from '../data/campaignData';
 import { Bike, Clock, AlertTriangle, ShieldAlert, ChevronRight, ArrowRight, CheckCircle2, User, HeartHandshake, Camera, Sparkles } from 'lucide-react';
+import gtCampusBanner from '../assets/gt-campus-banner.jpg';
 
 export const HeroScenario: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -24,7 +25,7 @@ export const HeroScenario: React.FC = () => {
         position: 'relative',
         width: '100%',
         height: 'clamp(320px, 42vw, 500px)',
-        backgroundImage: 'linear-gradient(180deg, rgba(0, 30, 56, 0.55) 0%, rgba(0, 48, 87, 0.85) 100%), url("images/gt-campus-banner.jpg")',
+        backgroundImage: `linear-gradient(180deg, rgba(0, 30, 56, 0.55) 0%, rgba(0, 48, 87, 0.85) 100%), url("${gtCampusBanner}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 35%',
         display: 'flex',
@@ -36,8 +37,6 @@ export const HeroScenario: React.FC = () => {
       }}>
         {/* Banner Content Container */}
         <div style={{ maxWidth: '900px', zIndex: 2 }}>
-
-
           <h1 style={{
             color: '#FFFFFF',
             fontSize: 'clamp(2.4rem, 5.5vw, 4rem)',
@@ -61,8 +60,6 @@ export const HeroScenario: React.FC = () => {
           }}>
             An End-of-Trip Parking & Wayfinding Pilot Proposal for the Tech Green Dismount Zone
           </p>
-
-
         </div>
 
         {/* Decorative Bottom Transition Overlay */}
